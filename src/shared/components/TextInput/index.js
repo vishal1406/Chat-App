@@ -1,0 +1,53 @@
+import React from "react";
+import { IconButton, TextField } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
+
+const CustomTextInput = ({
+   variant,
+   value,
+   label,
+   placeholder,
+   required,
+   fullWidth,
+   error,
+   helperText,
+   handleChange,
+   disabled,
+   inputType,
+   autoFocus,
+   showEndIcon,
+   endIconAction,
+   handleKeyPress,
+}) => {
+   return (
+      <TextField
+         type={inputType || "text"}
+         error={error || null}
+         required={required || false}
+         label={label}
+         placeholder={placeholder}
+         value={value}
+         variant={variant || "outlined"}
+         fullWidth={fullWidth || true}
+         helperText={helperText || null}
+         disabled={disabled || false}
+         autoFocus={autoFocus || false}
+         onChange={handleChange}
+         InputProps={{
+            endAdornment: showEndIcon ? (
+               <IconButton edge="end" size="small" onClick={endIconAction}>
+                  <SendIcon />
+               </IconButton>
+            ) : null,
+         }}
+         onKeyPress={(e) => {
+            if (e.key === "Enter") {
+               if (e.target.value && handleKeyPress) handleKeyPress();
+               else e.preventDefault();
+            }
+         }}
+      />
+   );
+};
+
+export default CustomTextInput;
