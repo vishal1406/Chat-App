@@ -4,6 +4,7 @@ import ReplyIcon from "@mui/icons-material/Reply";
 import { CustomButton } from "../../../shared";
 import { ACTION_TYPE } from "../constants";
 import { sxStyles } from "./style";
+import { getFormattedTime } from "../../../utils/helper";
 
 const Message = ({ user, time, content, replies, currentIndex, handleToggleDrawer }) => {
    return (
@@ -11,7 +12,7 @@ const Message = ({ user, time, content, replies, currentIndex, handleToggleDrawe
          <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <Box>
                <Typography variant="subtitle2" style={{ fontSize: "0.75rem" }}>
-                  {user} - {time}
+                  {user} - {getFormattedTime(time)}
                </Typography>
             </Box>
             <Box>

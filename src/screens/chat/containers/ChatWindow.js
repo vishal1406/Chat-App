@@ -12,7 +12,7 @@ const ChatWindow = () => {
       if (input.trim() === "") return;
       setMessages([
          ...messages,
-         { id: Date.now(), user: "Vishal", time: new Date().toLocaleTimeString(), content: input, replies: [] },
+         { id: Date.now(), user: "Vishal", time: new Date(), content: input, replies: [] },
       ]);
       setInput("");
    };
@@ -22,7 +22,7 @@ const ChatWindow = () => {
       messages[openedReplyIndex].replies.push({
          id: Date.now(),
          user: "Vishal",
-         time: new Date().toLocaleTimeString(),
+         time: new Date(),
          content: replyInput,
       });
       setMessages(messages);
