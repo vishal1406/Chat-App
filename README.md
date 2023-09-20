@@ -3,7 +3,8 @@
 ### Overview
 
 This Chat App interface allows users to write messages and reply to messages as threads.
-
+You can interact with the app by clicking here https://650b5b81ca350150d6a94805--strong-moxie-0e0967.netlify.app/
+or can follow the below steps to run it locally.
 ### Installation
 
 1. Install Node.js version 18 on your computer. If you already have Node.js installed, you can skip this step.
