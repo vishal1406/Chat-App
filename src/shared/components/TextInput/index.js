@@ -1,6 +1,5 @@
 import React from "react";
 import { IconButton, TextField } from "@mui/material";
-import SendIcon from "@mui/icons-material/Send";
 
 const CustomTextInput = ({
    variant,
@@ -14,8 +13,7 @@ const CustomTextInput = ({
    handleChange,
    disabled,
    inputType,
-   autoFocus,
-   showEndIcon,
+   endIcon,
    endIconAction,
    handleKeyPress,
 }) => {
@@ -31,12 +29,11 @@ const CustomTextInput = ({
          fullWidth={fullWidth || true}
          helperText={helperText || null}
          disabled={disabled || false}
-         autoFocus={autoFocus || false}
          onChange={handleChange}
          InputProps={{
-            endAdornment: showEndIcon ? (
+            endAdornment: endIcon ? (
                <IconButton edge="end" size="small" onClick={endIconAction}>
-                  <SendIcon />
+                  {endIcon}
                </IconButton>
             ) : null,
          }}

@@ -6,7 +6,7 @@ const StyledBox = styled(Box)({
    display: "flex",
    flexDirection: "column",
    width: "23.125rem",
-   padding: "0.25rem 0.375rem",
+   padding: "0.25rem 0.375rem"
 });
 
 const CustomDrawer = ({ children, anchor, isDrawerOpen, handleToggleDrawer }) => {
@@ -22,7 +22,7 @@ const CustomDrawer = ({ children, anchor, isDrawerOpen, handleToggleDrawer }) =>
             sx={{
                "& .MuiDrawer-paper": {
                   background: "#FFFFFF 0% 0% no-repeat padding-box",
-                  boxShadow: "0px 3px 6px #00000029",
+                  boxShadow: "0px 3x 6px #00000029",
                   opacity: 1,
                },
             }}

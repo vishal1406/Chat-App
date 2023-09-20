@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Grid, Box } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 import { CustomDrawer, CustomTextInput } from "../../../shared";
 import MessageList from "./MessageList";
 import { sxStyles } from "./style";
@@ -18,13 +19,7 @@ const ChatWindow = ({
 }) => {
    return (
       <Fragment>
-         <Grid
-            sx={sxStyles.chatWindowParentGrid}
-            container
-            direction="column"
-            justifyContent="space-between"
-            style={{ height: "100%" }}
-         >
+         <Grid sx={sxStyles.chatWindowParentGrid} container direction="column" justifyContent="space-between">
             <Grid item sx={{ flex: 1, overflowY: "auto" }}>
                <MessageList messages={messages} handleToggleDrawer={handleToggleDrawer} />
             </Grid>
@@ -34,7 +29,7 @@ const ChatWindow = ({
                   fullWidth
                   value={input}
                   handleChange={(e) => setInput(e.target.value)}
-                  showEndIcon={true}
+                  endIcon={<SendIcon />}
                   endIconAction={handleMessageSend}
                   handleKeyPress={handleMessageSend}
                />
@@ -52,7 +47,7 @@ const ChatWindow = ({
                   fullWidth
                   value={replyInput}
                   handleChange={(e) => setReplyInput(e.target.value)}
-                  showEndIcon={true}
+                  endIcon={<SendIcon />}
                   endIconAction={handleReplyMessage}
                   handleKeyPress={handleReplyMessage}
                />

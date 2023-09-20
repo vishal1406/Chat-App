@@ -13,10 +13,5 @@ export const sxStyles = {
       borderRadius: "0.5rem",
       position: "relative",
    },
-   messageReplyBox: {
-      position: "absolute",
-      top: "50%",
-      right: "0.625rem",
-      transform: "translateY(-50%)",
-   },
+   messageReplyBox: {},
 };

@@ -9,8 +9,8 @@ const theme = createTheme({
    palette: {
       primary: {
          main: "#33CCCC",
-         contrastText: "#FFFFFF",
-         lightCyan: "#EAF4F4",
+         contrast: "#FFFFFF",
+         lightCyan: "#F0FFFF",
       },
       typography: {
          fontFamily: ["Roboto"],
